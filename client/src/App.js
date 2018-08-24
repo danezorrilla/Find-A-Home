@@ -1,10 +1,10 @@
 import React from "react";
-import Welcome from "./components/pages/Welcome";
-import Login from "./components/pages/LogIn";
-import SignUp from "./components/pages/SignUp";
-import Dashboard from "./components/pages/Dashboard";
-import AddHouse from "./components/pages/AddHouse";
-import Wishlist from "./components/pages/Wishlist";
+import Welcome from "./pages/Welcome";
+import Login from "./pages/LogIn";
+import SignUp from "./pages/SignUp";
+import Dashboard from "./pages/Dashboard";
+import AddHouse from "./pages/AddHouse";
+import Wishlist from "./pages/Wishlist";
 import{BrowserRouter as Router, Route} from "react-router-dom"
 import "./App.css";
 
