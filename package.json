@@ -22,11 +22,7 @@
     "body-parser": "^1.18.2",
     "express": "^4.15.4",
     "if-env": "^1.0.4",
-<<<<<<< HEAD
-    "mongoose": "^5.2.9"
-=======
     "react": "^16.4.2",
     "react-router-dom": "^4.3.1"
->>>>>>> 4eaba360911a2e42058867de4d2b7e9213fbfc6b
   }
 }
