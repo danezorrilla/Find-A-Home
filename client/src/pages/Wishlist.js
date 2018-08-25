@@ -1,9 +1,16 @@
-import React from "react";
+import React, {Component} from "react";
+import WishListForm from "../components/WishListForm"
 
-const Wishlist = () => (
-    <div>
-        <h1>Wishlist</h1>
-    </div>
-);
+class Wishlist extends Component{
+
+    render(){
+        return(
+            <div>
+                <WishListForm/>
+            </div>
+
+        )
+    }
+};
 
 export default Wishlist;
