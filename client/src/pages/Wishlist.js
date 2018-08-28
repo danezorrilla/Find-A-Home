@@ -76,6 +76,7 @@ class Wishlist extends Component {
                     type="text"
                 />
                 <input onClick={this.handleSubmit} type="submit" value="Submit" />
+
             </div>
 
         )

@@ -8,10 +8,6 @@ import React from "react";
           <input type="checkbox" onChange={props.handleCheckBox}name={props.feature} value={props.feature} data-id={props.id}/>
           <label>{props.feature}</label>
           <br />
-
-          
-          
-  
         </form>
       </div>
   );
