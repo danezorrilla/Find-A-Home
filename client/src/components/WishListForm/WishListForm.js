@@ -22,11 +22,11 @@ const WishListForm = (props) =>
           <label>Pool</label>
           <br />
           
-          <input type="checkbox" value="Bedrooms"/>
+          <input type="text" value={props.bedrooms} name="bedrooms" onChange={props.InputChange}/>
           <label>Bedrooms</label>
           <br />
           
-          <input type="checkbox" value="Bathrooms"/>
+          <input type="text" value={props.bathrooms} name="bathrooms" onChange={props.InputChange}/>
           <label>Bathrooms</label>
           <h2>Add Choices</h2>
           <input type="text" value="title" />
