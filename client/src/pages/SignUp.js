@@ -1,27 +1,43 @@
 import React,{Component} from "react";
+import SignUpForm from "../components/SignUpForm";
+import API from "../utils/API";
 
-class  SignUp extends Component{
+class SignUp extends Component{
     state = {
         email: "",
         password: "",
         confirmPassword:""
     };
+
+    componentDidMount(){
+
+    }
     
     inputChange = event =>{
-        this.setState({email: event.target.value});
-        this.setState({password: event.target.value});
-        this.setState({confirmPassword: event.target.value});
+        const { name, value } = event.target;
+        this.setState({
+            [name]: value})
     }
+
+    submitForm = event =>{
+        event.preventDefault();
+        //API.createUser({email: this.state.email, password: this.state.password}).then(res => console.log(res));
+        let newUser = {email: this.state.email, password: this.state.password};
+        console.log(newUser);
+
+    }
+
     render(){
         return(
 
-            
             <div>
-            <h1>Signup</h1>
-            <input placeholder="email" type ="text" value = {this.state.inputChange}/>
-            <input placeholder="Password" type ="password" value = {this.state.inputChange}/>
-            <input placeholder="confirmPassword" type ="password" value = {this.state.inputChange}/>
-            <button bsStyle="primary">submit</button>
+                <SignUpForm
+                inputChange={this.inputChange}
+                submitForm={this.submitForm}
+                email={this.state.email}
+                password={this.state.password}
+                confirmPassword={this.state.confirmPassword}
+                />
             </div>
         )
     }
