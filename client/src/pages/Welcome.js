@@ -3,8 +3,8 @@ import React from "react";
 const Welcome = () => (
     <div>
         <h1>Welcome</h1>
-        <button bsStyle="primary">login</button>
-        <button bsStyle="primary">SignUp</button>
+        <button bsstyle="primary">login</button>
+        <button bsstyle="primary">SignUp</button>
 
     </div>
 );

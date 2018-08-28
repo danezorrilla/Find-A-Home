@@ -1,4 +1,18 @@
-import React,{Component} from "react";
+import React, { Component } from "react";
+
+var app = express();
+app.use(logger("dev"));
+app.use(bodyParser.urlencoded({ extended: true }));
+
+app.post("/submit", function(req, res) {
+    User.create(req.body)
+    .then(function(dbUser) {
+      res.json(dbUser);
+    })
+    .catch(function(err) {
+      res.json(err);
+    });
+  });
 
 class  SignUp extends Component{
     state = {
@@ -21,12 +35,14 @@ class  SignUp extends Component{
             <input placeholder="email" type ="text" value = {this.state.inputChange}/>
             <input placeholder="Password" type ="password" value = {this.state.inputChange}/>
             <input placeholder="confirmPassword" type ="password" value = {this.state.inputChange}/>
-            <button bsStyle="primary">submit</button>
+            <button bsstyle="primary">submit</button>
             </div>
         )
     }
 
     
 }
+
+
 
 export default SignUp;
