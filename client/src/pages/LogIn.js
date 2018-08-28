@@ -17,7 +17,7 @@ class  SignUp extends Component{
 
             
             <div>
-            <h1>Signup</h1>
+            <h1>Login</h1>
             <input placeholder="email" type ="text" value = {this.state.inputChange}/>
             <input placeholder="Password" type ="password" value = {this.state.inputChange}/>
             <input placeholder="confirmPassword" type ="password" value = {this.state.inputChange}/>
