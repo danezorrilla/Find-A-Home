@@ -5,6 +5,6 @@ const LogInForm = (props) =>
     <input name ="email" placeholder="email" type="text" onChange = {props.inputChange} value = {props.email}/>
     <input name="password" placeholder="password" type="password" onChange ={props.inputChange} value ={props.password}/>
     <button bsStyle="primary" type="submit" onClick={props.submitForm}>submit</button>
-</div>  
+</div> 
 
 export default LogInForm;
