@@ -6,11 +6,6 @@ import "./DashboardComp.css";
 const DashboardComp = props => (
   <div className="home-list"> 
 {/* =============== */}
-{/* <div className="button-style" data-uk-grid>
-  <div className="uk-width-1-1">
-      <button className="uk-button uk-button-default uk-button-large">Add Home</button>
-  </div>
-</div> */}
 
 <ul className="uk-subnav uk-subnav-divider" data-uk-margin>
     <li><a href="#">Add Home</a></li>

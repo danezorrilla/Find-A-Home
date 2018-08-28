@@ -21,10 +21,11 @@ class  SignUp extends Component{
             <input placeholder="email" type ="text" value = {this.state.inputChange}/>
             <input placeholder="Password" type ="password" value = {this.state.inputChange}/>
             <input placeholder="confirmPassword" type ="password" value = {this.state.inputChange}/>
-            <button bsStyle="primary">submit</button>
+            <button bsstyle="primary">submit</button>
             </div>
         )
     }
+    
 
     
 }

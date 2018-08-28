@@ -2,10 +2,14 @@ var mongoose = require("mongoose");
 var Schema = mongoose.Schema;
 var UserSchema = new Schema({
   // `title` must be of type String
-  email:	String,
-  password:	String,
-  _id:	Number,
-  houseids:	[],
+  email:	{String,
+    required: "Email is Required",
+    match: [/.+@.+\..+/, "Please enter a valid e-mail address"],
+    trim: true},
+    password:	{String,
+    trim: true,
+    required: "Password is Required"},
+    houseids:	[],
   arrayOfDesires:	[
       {item:	String,
         itemWeight:	Number,
