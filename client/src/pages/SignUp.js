@@ -21,9 +21,9 @@ class SignUp extends Component{
 
     submitForm = event =>{
         event.preventDefault();
-        //API.createUser({email: this.state.email, password: this.state.password}).then(res => console.log(res));
-        let newUser = {email: this.state.email, password: this.state.password};
-        console.log(newUser);
+        API.createUser({email: this.state.email, password: this.state.password}).then(function(res){console.log(res.data)});
+        //let newUser = {email: this.state.email, password: this.state.password};
+        //console.log(newUser);
 
     }
 
