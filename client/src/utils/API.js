@@ -9,6 +9,6 @@ export default {
 
     // Stores a new User to the database
     createUser: function(newUser){
-        return axios.post("/api/users", newUser);
+        return axios.post("/api/user", newUser);
     }
 };

@@ -1,7 +1,7 @@
 // Exporting an object containing all of our models
 
 module.exports = {
-  Wishlist: require("./wishlist"),
+  // Wishlist: require("./wishlist"),
   Users: require("./users"),
-  Houses: require("./houses")
+  // Houses: require("./houses")
 };
