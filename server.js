@@ -3,7 +3,8 @@ const express = require("express");
 const app = express();
 const logger = require("morgan");
 const PORT = process.env.PORT || 3001;
-const routes = require("./routes")
+const routes = require("./routes");
+const mongoose = require("mongoose");
 
 // Define middleware here
 app.use(bodyParser.urlencoded({ extended: true }));
