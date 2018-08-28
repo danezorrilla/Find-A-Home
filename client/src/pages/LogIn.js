@@ -1,28 +1,33 @@
 import React,{Component} from "react";
+import LogInForm from "../components/LogInForm";
+import API from "../utils/API";
 
-class  SignUp extends Component{
+class  LogIn extends Component{
     state = {
         email: "",
         password: "",
         confirmPassword:""
     };
     
-    inputChange = event =>{
-        this.setState({email: event.target.value});
-        this.setState({password: event.target.value});
-        this.setState({confirmPassword: event.target.value});
-    }
+   componentDidMount(){
+
+   }
+
+   inputChange = event =>{
+       const {name, value} = event.target;
+       this.setState({
+           [name]: value});
+   }
     render(){
         return(
-
-            
             <div>
-            <h1>Signup</h1>
-            <input placeholder="email" type ="text" value = {this.state.inputChange}/>
-            <input placeholder="Password" type ="password" value = {this.state.inputChange}/>
-            <input placeholder="confirmPassword" type ="password" value = {this.state.inputChange}/>
-            <button bsstyle="primary">submit</button>
-            </div>
+                <LogInForm         
+                    inputChange={this.inputChange}
+                    submitForm={this.submitForm}
+                    email={this.state.email}
+                    password={this.state.password}
+                />
+            </div>    
         )
     }
     
@@ -30,4 +35,4 @@ class  SignUp extends Component{
     
 }
 
-export default SignUp;
+export default LogIn;
