@@ -1,4 +1,54 @@
-.homelist {
+.home-list {
+    overflow: auto;
     width: 100%;
+    height: 100%;
+}
+
+.uk-light .uk-button-text {
+    color: slategray;
+}
+
+.uk-light .uk-button-text:hover {
+    color: black;
+}
+
+.button-style {
+    width: 100%;
+    padding: 0 0 0 0;
+}
+.uk-subnav {
+    width: 100%;
+    margin: 20px;
+}
+
+.uk-card-body {
+padding: 10px 20px 0px 20px;
+}
+
+.uk-card-default {
+    width: 85%;
     margin: auto;
+}
+
+
+/* Portrait */
+@media only screen 
+  and (max-device-width: 667px) 
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (orientation: portrait) { 
+
+    .uk-card .uk-card-default {
+        height: 100%;
+    }
+
+    .button-style {
+        width: 100%;
+        padding: 0 0 0 0;
+    }
+
+    .uk-card-default {
+        width: 100%;
+        margin: auto;
+    }
+
 }
