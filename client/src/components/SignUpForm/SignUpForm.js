@@ -30,11 +30,10 @@ const SignUpForm = (props) => (
     </div>
 
         <p data-uk-margin>
-            <button className="uk-button uk-button-default" type="submit" onClick={props.submitForm}>submit</button>
-        </p>
-        <p data-uk-margin>
+            <button className="uk-button uk-button-default" type="submit" onClick={props.submitForm}>Sign Up</button>
             <button className="uk-button uk-button-default" onClick={props.goToLogin}>login</button>
         </p>
+
 
     </form>
     </div>
