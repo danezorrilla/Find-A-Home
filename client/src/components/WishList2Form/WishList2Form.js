@@ -1,8 +1,8 @@
 import React from "react";
-import "./WishListForm.css"
+import "./WishList2Form.css"
 
   
-  const WishListForm = (props) => (
+  const WishList2Form = (props) => (
 <div className="form-group">
         <form>
           <input type="checkbox" onChange={props.handleCheckBox}name={props.feature} value={props.feature} data-id={props.id}/>
@@ -11,5 +11,5 @@ import "./WishListForm.css"
         </form>
       </div>
   );
-export default WishListForm;
+export default WishList2Form;
 

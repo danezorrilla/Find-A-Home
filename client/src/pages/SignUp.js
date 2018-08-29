@@ -6,6 +6,7 @@ import { Redirect} from "react-router-dom"
 class SignUp extends Component{
     state = {
         toLogin: false,
+        toWishlist: false,
         email: "",
         password: "",
         confirmPassword:""
@@ -14,6 +15,12 @@ class SignUp extends Component{
     goToLogin = event =>{
         this.setState({
             toLogin: true
+        })
+    }
+
+    goToWishlist = event =>{
+        this.setState({
+            toWishlist: true
         })
     }
     
@@ -29,11 +36,16 @@ class SignUp extends Component{
         //let newUser = {email: this.state.email, password: this.state.password};
         //console.log(newUser);
 
+        this.goToWishlist();
+
     }
 
     render(){
         if(this.state.toLogin === true){
             return <Redirect to="/login"/>
+        }
+        if(this.state.toWishlist === true){
+            return <Redirect to="/wishlist"/>
         }
         return(
         

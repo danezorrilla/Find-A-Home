@@ -1,6 +1,6 @@
 import React,{Component} from "react";
 import WelcomeComp from "../components/WelcomeComp";
-import { Redirect} from "react-router-dom"
+import {Redirect} from "react-router-dom"
 
 class Welcome extends Component{
 
