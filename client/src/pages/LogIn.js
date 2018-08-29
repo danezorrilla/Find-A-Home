@@ -5,8 +5,8 @@ import API from "../utils/API";
 class  LogIn extends Component{
     state = {
         email: "",
-        password: "",
-        confirmPassword:""
+        password: ""
+        
     };
     
    componentDidMount(){
