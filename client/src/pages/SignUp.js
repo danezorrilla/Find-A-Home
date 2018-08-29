@@ -34,6 +34,7 @@ class SignUp extends Component{
                 <SignUpForm
                 inputChange={this.inputChange}
                 submitForm={this.submitForm}
+                signIn={this.signIn}
                 email={this.state.email}
                 password={this.state.password}
                 confirmPassword={this.state.confirmPassword}
