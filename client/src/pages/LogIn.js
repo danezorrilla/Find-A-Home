@@ -6,6 +6,7 @@ import { Redirect} from "react-router-dom"
 class  LogIn extends Component{
     state = {
         toSignup: false,
+        toDashboard: false,
         email: "",
         password: ""
         
@@ -16,17 +17,30 @@ class  LogIn extends Component{
             toSignup: true
         })
     }
-   
 
+    goToDashboard = event =>{
+        this.setState({
+            toDashboard: true
+        })
+    }
+   
    inputChange = event =>{
        const {name, value} = event.target;
 
        this.setState({
            [name]: value});
    }
+
+   submitForm = event =>{
+       this.goToDashboard()
+   }
+
     render(){
         if(this.state.toSignup === true){
             return <Redirect to="/signup"/>
+        }
+        if(this.state.toDashboard === true){
+            return <Redirect to="/dashboard"/>
         }
         return(
             <div>
