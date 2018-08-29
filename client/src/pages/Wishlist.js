@@ -1,86 +1,57 @@
 import React, { Component } from "react";
 import WishListForm from "../components/WishListForm"
+import API from "../utils/API";
 
 class Wishlist extends Component {
 
     state = {
-        features: [
-
-            "yard"
-            ,
-
-            "garage"
-            ,
-
-            "basement"
-            ,
-
-            "pool"
-            ,
-
-            "bedrooms"
-            ,
-
-            "bathrooms"
-
-        ],
-        addToList: ""
+        yard: false,
+        garage: false,
+        basement: false,
+        pool: false,
+        bedrooms: 1,
+        bathrooms: 1
     }
 
-
-    handleCheckBox = event => {
-        
+    checkboxChange = event =>{
+        const {name, checked} = event.target;
+        this.setState({
+            [name]: checked
+        });
     }
 
-    handleInputChange = event => {
-        const { name, value } = event.target;
+    inputChange = event =>{
+        const {name, value} = event.target;
         this.setState({
             [name]: value
         })
-    };
+    }
 
-    handleSubmit = event => {
+    submitForm = event =>{
         event.preventDefault();
-        const { addToList, features } = this.state;
-        if (addToList) {
-            this.setState({
-                features:[addToList, ...features],
-                addToList: ""
-            })
-        }
-        console.log(features)
+        API.createWishlist({yard: this.state.yard, garage: this.state.garage, basement: this.state.basement,
+            pool: this.state.pool, bedrooms: this.state.bedrooms, bathrooms: this.state.bathrooms})
+        .then(res => console.log(res.data))
 
     }
 
-
-
-
-    render() {
-        return (
+    render(){
+        return(
             <div>
-                <h1>Wish List</h1>
-
-                <h2>Customize your home</h2>
-
-                {this.state.features.map((feature, i) => (
-                    <WishListForm
-                        id={i}
-                        key={i}
-                        feature={feature}
-                    />
-                ))}
-                <h2>Add Choices</h2>
-                <input onChange={this.handleInputChange}
-                    name="addToList"
-                    value={this.state.addToList}
-                    type="text"
+                <WishListForm
+                checkboxChange={this.checkboxChange}
+                inputChange={this.inputChange}
+                submitForm={this.submitForm}
+                yard={this.state.yard}
+                garage={this.state.garage}
+                basement={this.state.basement}
+                pool={this.state.pool}
+                bedrooms={this.state.bedrooms}
+                bathrooms={this.state.bathrooms}
                 />
-                <input onClick={this.handleSubmit} type="submit" value="Submit" />
-
             </div>
-
         )
     }
-};
+}
 
 export default Wishlist;
