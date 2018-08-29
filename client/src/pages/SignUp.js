@@ -1,16 +1,20 @@
 import React,{Component} from "react";
 import SignUpForm from "../components/SignUpForm";
 import API from "../utils/API";
+import { Redirect} from "react-router-dom"
 
 class SignUp extends Component{
     state = {
+        toLogin: false,
         email: "",
         password: "",
         confirmPassword:""
     };
 
-    componentDidMount(){
-
+    goToLogin = event =>{
+        this.setState({
+            toLogin: true
+        })
     }
     
     inputChange = event =>{
@@ -28,13 +32,17 @@ class SignUp extends Component{
     }
 
     render(){
+        if(this.state.toLogin === true){
+            return <Redirect to="/login"/>
+        }
         return(
-
+        
             <div>
                 <SignUpForm
                 inputChange={this.inputChange}
                 submitForm={this.submitForm}
                 signIn={this.signIn}
+                goToLogin={this.goToLogin}
                 email={this.state.email}
                 password={this.state.password}
                 confirmPassword={this.state.confirmPassword}
@@ -45,7 +53,4 @@ class SignUp extends Component{
 
     
 }
-
-
-
 export default SignUp;
