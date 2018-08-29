@@ -1,12 +1,3 @@
-@import url('https://fonts.googleapis.com/css?family=Lancelot');
-
-.uk-heading-line {
-    font-family: 'Lancelot', cursive;
-    font-size: 6em;
-    color: white;
-    text-shadow: 4px 4px black;
-}
-
 .background { 
     background: url("https://img00.deviantart.net/f694/i/2015/292/0/c/nice_house_by_roman_gp-d9dqnmw.jpg") no-repeat center center fixed; 
     -webkit-background-size: cover;
@@ -16,19 +7,4 @@
     /* ===== */
     border-top: 0;
     height: 100vh;
-  }
-
-  .uk-button-default {
-    background-color: lightseagreen;
-    color: white;
-    border: 1px solid #e5e5e5;
-    margin: 0px 0px 0px 35px;
-  }
-
-  .uk-button-default:focus, .uk-button-default:hover {
-    background-color: rgba(0, 195, 255, 0.582);
-  }
-
-  .formStyle {
-    margin: 0px 0px 0px 35px;
   }

@@ -1,24 +1,22 @@
-.App {
-  text-align: center;
-}
+@import url('https://fonts.googleapis.com/css?family=Lancelot');
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 80px;
+.uk-heading-line {
+    font-family: 'Lancelot', cursive;
+    font-size: 8em;
+    color: white;
+    text-shadow: 4px 4px black;
 }
-
-.App-header {
-  background-color: #222;
-  height: 150px;
-  padding: 20px;
+.uk-button-default {
+  background-color: rgb(56, 71, 71);
   color: white;
+  border: 1px solid #e5e5e5;
+  margin: 0px 10px 0px 0px;
 }
 
-.App-intro {
-  font-size: large;
+.uk-button-default:focus, .uk-button-default:hover {
+  background-color: rgba(0, 135, 177, 0.582);
 }
 
-@keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+.formStyle {
+  margin: 0px 0px 0px 50px;
 }

@@ -6,9 +6,6 @@ const LogInForm = (props) => (
 <div className="background">
 
 <h1 className="uk-heading-line uk-text-center"><span>Login</span></h1>
-    {/* <input name ="email" placeholder="email" type="text" onChange = {props.inputChange} value = {props.email}/>
-    <input name="password" placeholder="password" type="password" onChange ={props.inputChange} value ={props.password}/>
-    <button bsStyle="primary" type="submit" onClick={props.submitForm}>submit</button> */}
 
 <form className="formStyle">
 
@@ -27,12 +24,15 @@ const LogInForm = (props) => (
 </div>
 
     <p data-uk-margin>
-        <button className="uk-button uk-button-default" type="submit" onClick={props.submitForm}>submit</button>
+        <button className="uk-button uk-button-default" type="submit" onClick={props.submitForm}>Login</button>
+        <button className="uk-button uk-button-default" onClick={props.goToSignup}>SignUp</button>
     </p>
+
+
 
 </form>
 
-
+   
 </div> 
 )
 
