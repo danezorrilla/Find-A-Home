@@ -1,3 +1,17 @@
+@import url('https://fonts.googleapis.com/css?family=Lancelot');
+
+.welcomeTitle {
+    font-family: 'Lancelot', cursive;
+    font-size: 6em;
+    color: white;
+    text-shadow: 4px 4px black;
+}
+
 .welcomeBtn {
     margin: 0px 0px 15px 35px;
   }
+
+.welcomeCard {
+  background: rgba(255, 255, 255, 0.74);
+}
+
