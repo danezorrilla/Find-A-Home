@@ -32,7 +32,8 @@ class  LogIn extends Component{
    }
 
    submitForm = event =>{
-        API.getUser(this.state.email).then(res => console.log(res));
+       event.preventDefault();
+       API.getUser(this.state.email).then(res => console.log(res.data));
        //this.goToDashboard()
    }
 

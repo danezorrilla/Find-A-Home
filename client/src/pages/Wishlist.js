@@ -2,6 +2,8 @@ import React, { Component } from "react";
 import WishListForm from "../components/WishListForm"
 import API from "../utils/API";
 
+let email = localStorage.getItem("email");
+
 class Wishlist extends Component {
 
     state = {
@@ -12,7 +14,7 @@ class Wishlist extends Component {
         bedrooms: 1,
         bathrooms: 1
     }
-
+    
     checkboxChange = event =>{
         const {name, checked} = event.target;
         this.setState({
@@ -29,7 +31,8 @@ class Wishlist extends Component {
 
     submitForm = event =>{
         event.preventDefault();
-        API.createWishlist({yard: this.state.yard, garage: this.state.garage, basement: this.state.basement,
+        const {email} = this.props.match.params;
+        API.createWishlist(email, {yard: this.state.yard, garage: this.state.garage, basement: this.state.basement,
             pool: this.state.pool, bedrooms: this.state.bedrooms, bathrooms: this.state.bathrooms})
         .then(res => console.log(res.data))
 
@@ -38,6 +41,7 @@ class Wishlist extends Component {
     render(){
         return(
             <div>
+                <h1>{this.props.match.params.email}</h1>
                 <WishListForm
                 checkboxChange={this.checkboxChange}
                 inputChange={this.inputChange}

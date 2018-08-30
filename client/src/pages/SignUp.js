@@ -32,20 +32,22 @@ class SignUp extends Component{
 
     submitForm = event =>{
         event.preventDefault();
-        API.createUser({email: this.state.email, password: this.state.password}).then(function(res){console.log(res.data)});
+        //API.createUser({email: this.state.email, password: this.state.password}).then(function(res){console.log(res.data)});
         //let newUser = {email: this.state.email, password: this.state.password};
         //console.log(newUser);
 
-        this.goToWishlist();
+        localStorage.setItem("email", this.state.email);
 
+        this.goToWishlist();
     }
 
     render(){
+        let email = localStorage.getItem("email");
         if(this.state.toLogin === true){
             return <Redirect to="/login"/>
         }
         if(this.state.toWishlist === true){
-            return <Redirect to="/wishlist"/>
+            return <Redirect to={email + "/wishlist"}/>
         }
         return(
         
