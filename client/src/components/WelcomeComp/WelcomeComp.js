@@ -3,7 +3,7 @@ import "./WelcomeComp.css";
 
 
 const WelcomeComp = (props) => (
-<div className="background">
+<div className="welcome-page" id="page-wrapper">
     <h1 className="uk-heading-line uk-text-center"><span>Welcome</span></h1>
     <p className="welcomeBtn" data-uk-margin>
         <button className="uk-button uk-button-default" onClick={props.goToLogin}>login</button>
@@ -12,7 +12,7 @@ const WelcomeComp = (props) => (
 
 
 
-    <div className="uk-child-width-1-3@m" uk-grid uk-scrollspy="cls: uk-animation-fade; target: > div > .uk-card; delay: 500; repeat: true">
+    <div className="uk-child-width-1-3@m" data-uk-grid uk-scrollspy="cls: uk-animation-fade; target: > div > .uk-card; delay: 500; repeat: true">
     <div>
         <div className="uk-card uk-card-default uk-card-body">
             <h3 className="uk-card-title">1</h3>
@@ -31,7 +31,7 @@ const WelcomeComp = (props) => (
             <p>Don't worry about finding the "best."</p>
         </div>
     </div>
-    {/* <div>
+    <div>
         <div className="uk-card uk-card-default uk-card-body">
             <h3 className="uk-card-title">4</h3>
             <p>Be aware of biases.</p>
@@ -48,7 +48,7 @@ const WelcomeComp = (props) => (
             <h3 className="uk-card-title">6</h3>
             <p>Don't sweat the small stuff.</p>
         </div>
-    </div> */}
+    </div>
 </div>
 
 </div>

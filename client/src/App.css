@@ -2,7 +2,7 @@
 
 .uk-heading-line {
     font-family: 'Lancelot', cursive;
-    font-size: 8em;
+    font-size: 6em;
     color: white;
     text-shadow: 4px 4px black;
 }
@@ -19,4 +19,28 @@
 
 .formStyle {
   margin: 0px 0px 0px 50px;
+}
+
+
+html, body, #page-wrapper { 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  min-height: 100vh;
+  overflow: auto;
+}
+
+.welcome-page {
+  background-image: url("https://img00.deviantart.net/f694/i/2015/292/0/c/nice_house_by_roman_gp-d9dqnmw.jpg");
+}
+
+.background-signup { 
+  background-image: url("https://orig00.deviantart.net/6c42/f/2012/143/3/a/frankfurt_city_by_riot23-d50unfp.jpg");
+}
+
+.background-login { 
+  background-image: url("https://img00.deviantart.net/f694/i/2015/292/0/c/nice_house_by_roman_gp-d9dqnmw.jpg");
 }

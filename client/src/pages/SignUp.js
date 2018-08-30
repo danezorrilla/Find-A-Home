@@ -48,18 +48,15 @@ class SignUp extends Component{
             return <Redirect to="/wishlist"/>
         }
         return(
-        
-            <div>
-                <SignUpForm
-                inputChange={this.inputChange}
-                submitForm={this.submitForm}
-                signIn={this.signIn}
-                goToLogin={this.goToLogin}
-                email={this.state.email}
-                password={this.state.password}
-                confirmPassword={this.state.confirmPassword}
-                />
-            </div>
+            <SignUpForm
+            inputChange={this.inputChange}
+            submitForm={this.submitForm}
+            signIn={this.signIn}
+            goToLogin={this.goToLogin}
+            email={this.state.email}
+            password={this.state.password}
+            confirmPassword={this.state.confirmPassword}
+            />
         )
     }
 
