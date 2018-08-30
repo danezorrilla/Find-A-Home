@@ -29,12 +29,10 @@ class Welcome extends Component{
             return <Redirect to="/signup"/>
         }
         return(
-            <div>
-                <WelcomeComp
+            <WelcomeComp
                 goToLogin={this.goToLogin}
                 goToSignup={this.goToSignup}
-                />
-            </div>
+            />
         )
     }
 

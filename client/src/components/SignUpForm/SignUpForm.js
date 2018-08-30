@@ -3,8 +3,8 @@ import "./SignUpForm.css";
 
 
 const SignUpForm = (props) => (
-    <div className="background">
-    <h1 className="uk-heading-line uk-text-center"><span>Sign up</span></h1>
+    <div className="background-signup" id="page-wrapper">
+    <h1 className="signupTitle uk-heading-line uk-text-center"><span>Sign up</span></h1>
 
     <form className="formStyle">
 
