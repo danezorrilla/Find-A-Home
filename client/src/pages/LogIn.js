@@ -43,15 +43,13 @@ class  LogIn extends Component{
             return <Redirect to="/dashboard"/>
         }
         return(
-            <div>
-                <LogInForm         
-                    inputChange={this.inputChange}
-                    submitForm={this.submitForm}
-                    goToSignup={this.goToSignup}
-                    email={this.state.email}
-                    password={this.state.password}
-                />
-            </div>    
+            <LogInForm         
+                inputChange={this.inputChange}
+                submitForm={this.submitForm}
+                goToSignup={this.goToSignup}
+                email={this.state.email}
+                password={this.state.password}
+            />  
         )
     }
     
