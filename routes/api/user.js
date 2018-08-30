@@ -6,6 +6,9 @@ router.route("/")
   .post(userController.create)
   .get(userController.findById);
 
+router.route("/:email")
+  .get(userController.findByEmail);
+
 // Matches with "/api/signin"
 router.route("/signin")
   .get(userController.findAll)
