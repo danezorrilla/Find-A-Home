@@ -18,7 +18,6 @@ import "./WishListForm.css"
       <input type="number" name="bathrooms" value={props.bathrooms} onChange={props.inputChange}/><br/>
       <br/>
       <button type="submit" onClick={props.submitForm}>Submit</button>
-      <button><a href="/dashboard">Go To dashboard</a></button>
     </div>
   );
 export default WishListForm;

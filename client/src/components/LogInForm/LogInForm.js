@@ -5,7 +5,7 @@ import "./LogInForm.css";
 const LogInForm = (props) => (
 <div className="background-login" id="page-wrapper">
 
-<h1 className="uk-heading-line uk-text-center"><span>Login</span></h1>
+<h1 className="loginTitle uk-heading-line uk-text-center"><span>Login</span></h1>
 
 <form className="formStyle">
 
