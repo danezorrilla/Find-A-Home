@@ -6,12 +6,13 @@ var UserSchema = new Schema({
     type: String,
     required: "Email is Required",
     match: [/.+@.+\..+/, "Please enter a valid e-mail address"],
-    trim: true},
+    trim: true,
+    unique: true},
   password:	{
     type: String,
     trim: true,
     required: "Password is Required"},
-  houseids:	[],
+  // houseids:	[],
   // arrayOfDesires:	[
   //     {item:	String,
   //       itemWeight:	Number,
