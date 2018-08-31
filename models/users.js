@@ -12,6 +12,10 @@ var UserSchema = new Schema({
     type: String,
     trim: true,
     required: "Password is Required"},
+  wishlist: {
+    type: Schema.Types.ObjectId,
+    ref: "wishlist"
+  }
   // houseids:	[],
   // arrayOfDesires:	[
   //     {item:	String,

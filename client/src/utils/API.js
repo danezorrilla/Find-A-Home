@@ -12,8 +12,8 @@ export default {
         return axios.post("/api/user", newUser);
     },
 
-    createWishlist: function(newWishList){
-        return axios.post("/api/wishlist", newWishList);
+    createWishlist: function(email, newWishList){
+        return axios.post("/api/wishlist/" + email, newWishList);
     },
     
     // Stores a new House to the database

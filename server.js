@@ -19,6 +19,7 @@ if (process.env.NODE_ENV === "production") {
 
 //db defined here:
 mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/houses")
+
 // Define API routes here
 app.post("/submit", function(req, res) {
   User.create(req.body)
