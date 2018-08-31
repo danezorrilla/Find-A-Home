@@ -31,12 +31,16 @@ class SignUp extends Component{
     }
 
     submitForm = event =>{
-        event.preventDefault();
+        const {email, password, confirmPassword} = this.state;
+        if (email === "" || password === "" || confirmPassword === "") {
+            alert("Please review all input fields")
+        }else {event.preventDefault();
         API.createUser({email: this.state.email, password: this.state.password}).then(function(res){console.log(res.data)});
         //let newUser = {email: this.state.email, password: this.state.password};
         //console.log(newUser);
 
         this.goToWishlist();
+        }
 
     }
 
