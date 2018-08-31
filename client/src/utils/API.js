@@ -17,8 +17,8 @@ export default {
     },
     
     // Stores a new House to the database
-    createHouse: function(newHouse){
-    return axios.post("/api/house", newHouse);
+    createHouse: function(email, newHouse){
+    return axios.post("/api/house/" + email, newHouse);
     },
 
     // Gets the house with the given id

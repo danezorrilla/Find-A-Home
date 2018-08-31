@@ -22,8 +22,8 @@ const App =() =>(
       {/* <Route exact path = "/wishlist"  component={Wishlist}/> */}
       <Route exact path = "/:email/wishlist" component={Wishlist}/>
       <Route exact path = "/wishlist2" component={Wishlist2}/>
-      <Route exact path = "/dashboard" component={Dashboard}/>
-      <Route exact path = "/addhouse" component={AddHouse}/>
+      <Route exact path = "/:email/dashboard" component={Dashboard}/>
+      <Route exact path = "/:email/addhouse" component={AddHouse}/>
 
       </Switch>
 

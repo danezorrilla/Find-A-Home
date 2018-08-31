@@ -6,29 +6,33 @@ photo:	String,
 nickname:	String,
 price:	Number,
 indoorsquarefootage:	Number,
-bathrooms:	Number,
-bedrooms:	Number,
 address:	String,
 city:	String,
 state:	String,
 zip:	Number,
 mls:	Number,
-houseid:	ObjectId,
-userid:	Schema.Types.UserId,
-other:	[
-  {item: string, weight: number}
-],
-wishlistArray: [
-  {item: string,
-    itemWeight: number,
-    itemScore,
-    ItemNumber: {type: Schema.Types.ObjectId,
-    ref: "wishlist"},
-    itemCategory: string,
-    itemQualifier}
+// houseid:	ObjectId,
+// userid:	Schema.Types.UserId,
+// other:	[
+//   {item: string, weight: number}
+// ],
+// wishlistArray: [
+//   {item: string,
+//     itemWeight: number,
+//     itemScore,
+//     ItemNumber: {type: Schema.Types.ObjectId,
+//     ref: "wishlist"},
+//     itemCategory: string,
+//     itemQualifier}
     
-]
+// ]
 
+yard: Boolean,
+garage: Boolean,
+basement: Boolean,
+pool: Boolean,
+bedrooms:	Number,
+bathrooms:	Number
 
 });
 
