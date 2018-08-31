@@ -6,8 +6,8 @@ const WelcomeComp = (props) => (
 <div className="welcome-page" id="page-wrapper">
     <h1 className="welcomeTitle uk-heading-line uk-text-center"><span>Welcome</span></h1>
     <p className="welcomeBtn" data-uk-margin>
-        <button className="uk-button uk-button-default" onClick={props.goToLogin}>login</button>
-        <button className="uk-button uk-button-default" onClick={props.goToSignup}>SignUp</button>
+        <button className="uk-button uk-button-default" data-uk-icon="sign-in" onClick={props.goToLogin}>login</button>
+        <button className="uk-button uk-button-default" data-uk-icon="sign-in" onClick={props.goToSignup}>SignUp</button>
     </p>
 
 

@@ -4,15 +4,15 @@ import "./DashboardComp.css";
 
 
 const DashboardComp = props => (
-  <div className="home-list"> 
+  <div className="dashboard-page home-list" id="page-wrapper"> 
 {/* =============== */}
 
 <button onClick={props.goToWelcome}>Logout</button>
 
 <ul className="uk-subnav uk-subnav-divider" data-uk-margin>
     <li><a href="/addhouse">Add House</a></li>
-    <li><a href="#">Button 2</a></li>
-    <li><a href="#">Button 3</a></li>
+    <li><a href="#">Wish List</a></li>
+    <li><a href="#">Logout</a></li>
 </ul>
 
 
