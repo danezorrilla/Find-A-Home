@@ -21,4 +21,3 @@ import "./WishListForm.css"
     </div>
   );
 export default WishListForm;
-
