@@ -1,12 +1,21 @@
 const db = require("../models");
+const bcrypt = require("bcrypt");
 
 // Defining methods for the houseController
 module.exports = {
   create: function(req, res) {
-    db.Users
-      .create(req.body)
-      .then(dbModel => res.json(dbModel))
-      .catch(err => res.status(422).json(err));
+    const{email,password} = req.body;
+
+    const salt = bcrypt.genSaltSync(10);
+    const encryptedPassword = bcrypt.hashSync(password, salt);
+
+    db.Users.init().then(() => {
+      db.Users.create({email, password, encryptedPassword: encryptedPassword})
+      .then(dbModel => res.json(dbModel)
+      .catch(err => res.status(422).json(err) ))})
+
+    
+      
   },
   findAll: function(req, res) {
     db.Users
@@ -41,6 +50,3 @@ module.exports = {
       .catch(err => res.status(422).json(err));
   }
 };
-//Create user
-//login
-//findByID
