@@ -2,7 +2,7 @@ const router = require("express").Router();
 const houseController = require("../../controllers/houseController");
 
 // Matches with "/api/house"
-router.route("/house")
+router.route("/:email")
   .get(houseController.findAll)
   .post(houseController.create);
 

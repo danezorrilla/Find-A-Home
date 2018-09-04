@@ -4,8 +4,6 @@ import API from "../utils/API";
 import Dashboard from "./Dashboard";
 import {Redirect} from "react-router-dom";
 
-let email = localStorage.getItem("email");
-
 class Wishlist extends Component {
 
     state = {

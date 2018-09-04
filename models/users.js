@@ -15,6 +15,10 @@ var UserSchema = new Schema({
   wishlist: {
     type: Schema.Types.ObjectId,
     ref: "wishlist"
+  },
+  houses: {
+    type: Schema.Types.ObjectId,
+    ref: "houses"
   }
   // houseids:	[],
   // arrayOfDesires:	[
