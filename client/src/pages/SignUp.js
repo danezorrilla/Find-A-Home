@@ -3,6 +3,7 @@ import SignUpForm from "../components/SignUpForm";
 import API from "../utils/API";
 import { Redirect} from "react-router-dom"
 
+
 class SignUp extends Component{
     state = {
         toLogin: false,
@@ -32,22 +33,22 @@ class SignUp extends Component{
 
     submitForm = event =>{
         event.preventDefault();
-        //API.createUser({email: this.state.email, password: this.state.password}).then(function(res){console.log(res.data)});
-        //let newUser = {email: this.state.email, password: this.state.password};
-        //console.log(newUser);
+        API.createUser({email: this.state.email, password: this.state.password}).then(function(res){console.log(res.data)});
 
-        localStorage.setItem("email", this.state.email);
-
-        this.goToWishlist();
+        if(this.state.email === "") {
+            alert("please enter valid email");
+        }else if(this.state.password !== this.state.confirmPassword){
+            alert(" passwords do not match");
+        }else{
+            this.goToWishlist();
+        }
+          
     }
 
     render(){
-        let email = localStorage.getItem("email");
-        if(this.state.toLogin === true){
-            return <Redirect to="/login"/>
-        }
+        
         if(this.state.toWishlist === true){
-            return <Redirect to={email + "/wishlist"}/>
+            return <Redirect to={this.state.email + "/wishlist"}/>
         }
         return(
             <SignUpForm
