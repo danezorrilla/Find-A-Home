@@ -5,13 +5,13 @@ module.exports = {
   create: function(req, res) {
     db.Houses
       .create(req.body)
-      .then(dbModel => res.json(dbModel))
+      .then(dbHouse => db.Users.findOneAndUpdate({email: req.params.email}, {houses: dbHouse._id}, {new: true}))
+      .then(dbUser => res.json(dbUser))
       .catch(err => res.status(422).json(err));
   },
   findAll: function(req, res) {
     db.Houses
       .find(req.query)
-      .sort({ date: -1 })
       .then(dbModel => res.json(dbModel))
       .catch(err => res.status(422).json(err));
   },

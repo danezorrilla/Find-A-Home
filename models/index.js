@@ -3,5 +3,5 @@
 module.exports = {
   Wishlist: require("./wishlist"),
   Users: require("./users"),
-  // Houses: require("./houses")
+  Houses: require("./houses")
 };
