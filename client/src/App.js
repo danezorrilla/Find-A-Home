@@ -9,9 +9,6 @@ import Wishlist2 from "./pages/Wishlist2";
 import{BrowserRouter as Router, Route, Switch} from "react-router-dom"
 import "./App.css";
 
-let email = localStorage.getItem("email");
-
-
 const App =() =>(
     <Router>
       <div>

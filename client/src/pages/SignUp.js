@@ -40,7 +40,7 @@ class SignUp extends Component{
     }
 
     render(){
-        let email = localStorage.getItem("email");
+        const {email} = this.props.match.params;
         if(this.state.toLogin === true){
             return <Redirect to="/login"/>
         }
