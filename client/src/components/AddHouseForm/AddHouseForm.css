@@ -1,8 +1,18 @@
 @import url('https://fonts.googleapis.com/css?family=Lancelot');
 
-.signupTitle {
+.addHouseTitle {
     font-family: 'Lancelot', cursive;
     font-size: 6em;
     color: white;
     text-shadow: 4px 4px black;
+}
+
+.addHouse-margin {
+    margin-top: 5px!important;
+    margin-bottom: 5px
+}
+
+.add-house-btn {
+    margin: auto;
+    width: auto;
 }

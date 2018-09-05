@@ -25,6 +25,13 @@ html, body, #page-wrapper {
   overflow: auto;
 }
 
+.form-width {
+    margin: auto;
+    width: fit-content;
+    background: rgba(255, 255, 255, 0.788);
+    padding: 10px;
+}
+
 .welcome-page {
   background-image: url("https://img00.deviantart.net/f694/i/2015/292/0/c/nice_house_by_roman_gp-d9dqnmw.jpg");
 }
@@ -39,4 +46,8 @@ html, body, #page-wrapper {
 
 .dashboard-page {
   background-image: url("https://images.unsplash.com/photo-1485797532868-c4401a435f08?ixlib=rb-0.3.5&s=3c5b39af4ef9bb4788d0b09b046feab3&auto=format&fit=crop&w=1650&q=80");
+}
+
+.background-addHouse {
+  background-image: url("http://www.sorell.dm/wp-content/uploads/2017/07/Blueprints.jpg");
 }

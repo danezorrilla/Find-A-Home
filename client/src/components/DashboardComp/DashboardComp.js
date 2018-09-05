@@ -15,7 +15,6 @@ const DashboardComp = props => (
     <li><a href="#">Logout</a></li>
 </ul>
 
-
 {/* =============== */}
 
 <div data-uk-slider="center: true">
@@ -27,91 +26,11 @@ const DashboardComp = props => (
             <img src="https://getuikit.com/docs/images/light.jpg" alt=""/>
           </div>
             <div className="uk-card-body">
-              <p>Name: {props.name}</p>
-              <p>Address:</p> {props.address}
-              <p>Price:</p> {props.price}
-              <p>Matches:</p> {props.match}
-              <div className="uk-card-footer">
-                <a href="#" className="uk-button uk-button-text">Read more</a>
-              </div>
-            </div>
-          </div>
-      </li>
-      
-      <li>
-        <div className="uk-card uk-card-default">
-          <div className="uk-card-media-top">
-            <img src="https://getuikit.com/docs/images/light.jpg" alt=""/>
-          </div>
-            <div className="uk-card-body">
-              <h3 className="uk-card-title">Name: {props.name}</h3>
-              <p>Address:</p> {props.address}
-              <p>Price:</p> {props.price}
-              <p>Matches:</p> {props.match}
-              <div className="uk-card-footer">
-                <a href="#" className="uk-button uk-button-text">Read more</a>
-              </div>
-            </div>
-          </div>
-      </li>
-      <li>
-        <div className="uk-card uk-card-default">
-          <div className="uk-card-media-top">
-            <img src="https://getuikit.com/docs/images/light.jpg" alt=""/>
-          </div>
-            <div className="uk-card-body">
-              <h3 className="uk-card-title">Name: {props.name}</h3>
-              <p>Address:</p> {props.address}
-              <p>Price:</p> {props.price}
-              <p>Matches:</p> {props.match}
-              <div className="uk-card-footer">
-                <a href="#" className="uk-button uk-button-text">Read more</a>
-              </div>
-            </div>
-          </div>
-      </li>
-      <li>
-        <div className="uk-card uk-card-default">
-          <div className="uk-card-media-top">
-            <img src="https://getuikit.com/docs/images/light.jpg" alt=""/>
-          </div>
-            <div className="uk-card-body">
-              <h3 className="uk-card-title">Name: {props.name}</h3>
-              <p>Address:</p> {props.address}
-              <p>Price:</p> {props.price}
-              <p>Matches:</p> {props.match}
-              <div className="uk-card-footer">
-                <a href="#" className="uk-button uk-button-text">Read more</a>
-              </div>
-            </div>
-          </div>
-      </li>
-      <li>
-        <div className="uk-card uk-card-default">
-          <div className="uk-card-media-top">
-            <img src="https://getuikit.com/docs/images/light.jpg" alt=""/>
-          </div>
-            <div className="uk-card-body">
-              <h3 className="uk-card-title">Name: {props.name}</h3>
-              <p>Address:</p> {props.address}
-              <p>Price:</p> {props.price}
-              <p>Matches:</p> {props.match}
-              <div className="uk-card-footer">
-                <a href="#" className="uk-button uk-button-text">Read more</a>
-              </div>
-            </div>
-          </div>
-      </li>
-      <li>
-        <div className="uk-card uk-card-default">
-          <div className="uk-card-media-top">
-            <img src="https://getuikit.com/docs/images/light.jpg" alt=""/>
-          </div>
-            <div className="uk-card-body">
-              <h3 className="uk-card-title">Name: {props.name}</h3>
-              <p>Address:</p> {props.address}
-              <p>Price:</p> {props.price}
-              <p>Matches:</p> {props.match}
+              {/* <img src={props.image}/> */}
+              <p name="name" value={props.name}>name: {props.name}</p>
+              <p name="address" value={props.address}>address: {props.address}</p>
+              <p name="price" value={props.price}>price: {props.price}</p>
+              {/* <p name="match" value={props.match}>match count</p> */}
               <div className="uk-card-footer">
                 <a href="#" className="uk-button uk-button-text">Read more</a>
               </div>

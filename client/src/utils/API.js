@@ -12,13 +12,21 @@ export default {
         return axios.post("/api/user", newUser);
     },
 
+    getWishlist: function(email){
+        return axios.get("/api/wishlist/" + email)
+    },
+
     createWishlist: function(email, newWishList){
         return axios.post("/api/wishlist/" + email, newWishList);
     },
+
+    getHouses: function(email){
+        return axios.get("/api/house/" + email)
+    },
     
     // Stores a new House to the database
-    createHouse: function(newHouse){
-    return axios.post("/api/house", newHouse);
+    createHouse: function(email, newHouse){
+    return axios.post("/api/house/" + email, newHouse);
     },
 
     // Gets the house with the given id
