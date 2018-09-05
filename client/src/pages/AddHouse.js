@@ -42,24 +42,20 @@ class AddHouse extends Component{
     submitForm = event =>{
         event.preventDefault();
         const{email} = this.props.match.params;
-        // API.createHouse({photo: this.state.photo, nickname: this.state.nickname, price: this.state.price, 
-        // indoorsquarefoot: this.state.indoorsquarefoot, address: this.state.address, city: this.state.city,
-        // state: this.state.State, zip: this.state.zip, mls: this.state.mls, yard: this.state.yard, garage: this.state.garage,
-        // basement: this.state.basement, pool: this.state.pool, bedrooms: this.state.bedrooms, bathrooms: this.state.bathrooms})
-        // .then(res => console.log(res.data))
-        // this.goToDashboard();
 
         API.createHouse(email, {photo: this.state.photo, nickname: this.state.nickname, price: this.state.price,
         indoorsquarefoot: this.state.indoorsquarefoot, address: this.state.address, yard: this.state.yard,
         garage: this.state.garage, basement: this.state.basement, pool: this.state.pool, bedrooms: this.state.bedrooms, 
         bathrooms: this.state.bathrooms})
-        .then(res => console.log(res.data))
+        .then(res => console.log(res.data));
+
+        this.gotoDashboard();
         
     }
 
     render(){
         if(this.state.toDashboard === true){
-            return <Redirect to="/dashboard"/>
+            return <Redirect to="dashboard"/>
         }
         return(
             <div>

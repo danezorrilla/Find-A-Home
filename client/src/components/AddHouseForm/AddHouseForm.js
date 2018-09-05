@@ -17,7 +17,7 @@ const AddHouseForm = (props) =>
         <br/>
 
         <label>Square Feet:</label>
-        <input type="text" name="indoorsquarefoot" value={props.indoorsquarefoot} onChange={props.inputChange}/>
+        <input type="number" name="indoorsquarefoot" value={props.indoorsquarefoot} onChange={props.inputChange}/>
         <br/>
 
         <label>Address:</label>

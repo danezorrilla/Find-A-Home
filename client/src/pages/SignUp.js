@@ -34,7 +34,6 @@ class SignUp extends Component{
     submitForm = event =>{
         event.preventDefault();
         API.createUser({email: this.state.email, password: this.state.password}).then(function(res){console.log(res.data)});
-<<<<<<< HEAD
 
         if(this.state.email === "") {
             alert("please enter valid email");
@@ -44,18 +43,16 @@ class SignUp extends Component{
             this.goToWishlist();
         }
           
-=======
-        //let newUser = {email: this.state.email, password: this.state.password};
-        //console.log(newUser);
-
-        // this.goToWishlist();
->>>>>>> 13963730fc4cc50e7b67d2358c5bae1b414b8ad4
     }
 
     render(){
-        
+        const {email} = this.state;
+        if(this.state.toLogin === true){
+            return <Redirect to="/login"/>
+        }
         if(this.state.toWishlist === true){
-            return <Redirect to={this.state.email + "/wishlist"}/>
+            return <Redirect to={
+                email + "/wishlist"}/>
         }
         return(
             <SignUpForm

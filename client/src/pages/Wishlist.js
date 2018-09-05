@@ -47,7 +47,7 @@ class Wishlist extends Component {
 
     render(){
         if(this.state.toDashboard === true){
-            return <Redirect to="/dashboard"/>
+            return <Redirect to="dashboard"/>
                 }
 
         return(
