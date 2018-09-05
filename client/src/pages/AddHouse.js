@@ -49,13 +49,13 @@ class AddHouse extends Component{
         bathrooms: this.state.bathrooms})
         .then(res => console.log(res.data));
 
-        this.toDashboard();
+        this.goToDashboard();
         
     }
 
     render(){
         if(this.state.toDashboard === true){
-            return <Redirect to="/dashboard"/>
+            return <Redirect to="dashboard"/>
         }
         return(
             <div>

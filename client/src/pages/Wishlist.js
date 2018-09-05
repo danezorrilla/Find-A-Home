@@ -3,6 +3,7 @@ import WishListForm from "../components/WishListForm"
 import API from "../utils/API";
 import Dashboard from "./Dashboard";
 import {Redirect} from "react-router-dom";
+import fakeAuth from "../components/Authentication"
 
 class Wishlist extends Component {
 
@@ -40,14 +41,16 @@ class Wishlist extends Component {
     }
 
     goToDashboard = event =>{
-        this.setState({
-            toDashboard: true
+        fakeAuth.authenticate(() => {
+            this.setState({
+                toDashboard: true
+            })
         })
     }
 
     render(){
         if(this.state.toDashboard === true){
-            return <Redirect to="/dashboard"/>
+            return <Redirect to="dashboard"/>
                 }
 
         return(
