@@ -46,7 +46,7 @@ class SignUp extends Component{
     }
 
     render(){
-        const {email} = this.props.match.params;
+        const {email} = this.state;
         if(this.state.toLogin === true){
             return <Redirect to="/login"/>
         }

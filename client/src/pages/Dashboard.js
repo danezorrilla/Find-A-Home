@@ -76,7 +76,7 @@ class Dashboard extends Component{
             return <Redirect to="/"/>
         }
         if(this.state.toAddHouse === true){
-            return <Redirect to={email + "/addhouse"}/>
+            return <Redirect to="addhouse"/>
         }
         return(
             <div>
