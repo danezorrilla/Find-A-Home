@@ -6,7 +6,7 @@ import Dashboard from "./pages/Dashboard";
 import AddHouse from "./pages/AddHouse";
 import Wishlist from "./pages/Wishlist";
 import Wishlist2 from "./pages/Wishlist2";
-import{BrowserRouter as Router, Route, Switch} from "react-router-dom"
+import{BrowserRouter as Router, Route, Switch} from "react-router-dom";
 import "./App.css";
 
 const App =() =>(
