@@ -13,9 +13,7 @@ module.exports = {
       db.Users.create({email, password, encryptedPassword: encryptedPassword})
       .then(dbModel => res.json(dbModel)
       .catch(err => res.status(422).json(err) ))})
-
-    
-      
+          
   },
   findAll: function(req, res) {
     db.Users

@@ -1,4 +1,5 @@
 const bodyParser = require("body-parser");
+const path = require("path");
 const express = require("express");
 const app = express();
 
@@ -10,9 +11,8 @@ const mongoose = require("mongoose");
 // Define middleware here
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
-app.use(express.static("public"));
 app.use(logger("dev"));
-app.use(routes)
+
 // Serve up static assets (usually on heroku)
 if (process.env.NODE_ENV === "production") {
   app.use(express.static("client/build"));
@@ -22,6 +22,7 @@ if (process.env.NODE_ENV === "production") {
 mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/houses")
 
 // Define API routes here
+app.use(routes)
 
 // app.post("/signup", (req,res)=> {
 //   const {email,password} = req.body;
