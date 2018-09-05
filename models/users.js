@@ -9,9 +9,14 @@ var UserSchema = new Schema({
     trim: true,
     unique: true},
   password:	{
-    type: String,
-    trim: true,
-    required: "Password is Required"},
+     type: String,
+     trim: true,
+     required: "Password is Required"},
+  encryptedPassword: {
+      type: String,
+      trim: true,
+      required: "password is required"
+    },
   wishlist: {
     type: Schema.Types.ObjectId,
     ref: "wishlist"

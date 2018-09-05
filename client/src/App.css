@@ -9,6 +9,10 @@
   background-color: rgba(0, 135, 177, 0.582);
 }
 
+.uk-checkbox {
+ background-color:  rgba(0, 135, 177, 0.582)
+}
+
 .formStyle {
   margin: 0px 0px 0px 50px;
 }
@@ -51,3 +55,9 @@ html, body, #page-wrapper {
 .background-addHouse {
   background-image: url("http://www.sorell.dm/wp-content/uploads/2017/07/Blueprints.jpg");
 }
+
+.background-wishlist {
+  background-image: url("https://img00.deviantart.net/063b/i/2010/199/f/7/key_to_wonderland_by_missspocks.jpg");
+}
+
+

@@ -40,12 +40,8 @@ const AddHouseForm = (props) => (
                     <input className="uk-input uk-form-width-large" type="number" name="bathrooms" value={props.bathrooms} onChange={props.inputChange} placeholder=""/>
                 </div>
         </fieldset>
-        <button className="uk-button uk-button-default add-house-btn" onClick={props.submitForm}>Add House</button>
+        <button className="uk-button uk-button-default add-house-btn" onClick={props.submitForm}>Submit House</button>
     </form>
-
-    
-    {/* <button className="uk-button uk-button-default add-house-btn" onClick={props.submitForm}>Add House</button> */}
-
 </div>
 )
 export default AddHouseForm;
