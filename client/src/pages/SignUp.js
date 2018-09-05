@@ -43,13 +43,16 @@ class SignUp extends Component{
             this.goToWishlist();
         }
           
-
     }
 
     render(){
-        
+        const {email} = this.state;
+        if(this.state.toLogin === true){
+            return <Redirect to="/login"/>
+        }
         if(this.state.toWishlist === true){
-            return <Redirect to={this.state.email + "/wishlist"}/>
+            return <Redirect to={
+                email + "/wishlist"}/>
         }
         return(
             <SignUpForm
