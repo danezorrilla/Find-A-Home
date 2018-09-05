@@ -34,22 +34,10 @@ class SignUp extends Component{
     submitForm = event =>{
         event.preventDefault();
         API.createUser({email: this.state.email, password: this.state.password}).then(function(res){console.log(res.data)});
-<<<<<<< HEAD
+        let newUser = {email: this.state.email, password: this.state.password};
+        console.log(newUser);
 
-        if(this.state.email === "") {
-            alert("please enter valid email");
-        }else if(this.state.password !== this.state.confirmPassword){
-            alert(" passwords do not match");
-        }else{
-            this.goToWishlist();
-        }
-          
-=======
-        //let newUser = {email: this.state.email, password: this.state.password};
-        //console.log(newUser);
-
-        // this.goToWishlist();
->>>>>>> 13963730fc4cc50e7b67d2358c5bae1b414b8ad4
+        this.goToWishlist();
     }
 
     render(){
