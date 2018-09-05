@@ -19,12 +19,14 @@ var UserSchema = new Schema({
     },
   wishlist: {
     type: Schema.Types.ObjectId,
-    ref: "wishlist"
+    ref: "Wishlist"
   },
-  houses: {
-    type: Schema.Types.ObjectId,
-    ref: "houses"
-  }
+  houses: [
+    {
+      type: Schema.Types.ObjectId,
+      ref: "Housing"
+    }
+  ]
   // houseids:	[],
   // arrayOfDesires:	[
   //     {item:	String,

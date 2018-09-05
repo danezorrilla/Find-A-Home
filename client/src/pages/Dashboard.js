@@ -1,7 +1,8 @@
 import React, {Component} from "react";
 import DashboardC from "../components/DashboardC";
 import API from "../utils/API";
-import {Redirect} from "react-router-dom"
+import {Redirect} from "react-router-dom";
+import fakeAuth from "../components/Authentication";
 
 class Dashboard extends Component{
 
@@ -20,35 +21,39 @@ class Dashboard extends Component{
     componentDidMount(){
 
         API.getHouses(this.props.match.params.email)
-        .then(res => this.setState({houses: res.data, image: "", name: "", address: "", price: 0, match: 0}) )
+        .then(res => this.setState({houses: res.data.houses, image: "", name: "", address: "", price: 0, match: 0}) )
+        .catch(console.log);
 
         API.getWishlist(this.props.match.params.email)
-        .then(res => {this.setState({wishlist: res.data}); this.makeMatch(); } )
+        .then(res => console.log(res.data))
+
+        API.getWishlist(this.props.match.params.email)
+        .then(res => {this.setState({wishlist: res.data.wishlist}); this.makeMatch(); } )
         
     }
 
     makeMatch = () =>{
-        let {houses, wishlist} = this.state;
+        const {houses, wishlist} = this.state;
         for(let index = 0; index < houses.length; index++){
 
             let match = 0;
 
-            if(wishlist[0].basement === true && houses[index].basement === true ){
+            if(wishlist.basement === true && houses[index].basement === true ){
                 match = match + 1;
             }
-            if(wishlist[0].bathrooms === houses[index].bathrooms){
+            if(wishlist.bathrooms === houses[index].bathrooms){
                 match = match + 1;
             }
-            if(wishlist[0].bedrooms === houses[index].bedrooms){
+            if(wishlist.bedrooms === houses[index].bedrooms){
                 match = match + 1;
             }
-            if(wishlist[0].garage === true && houses[index].garage === true){
+            if(wishlist.garage === true && houses[index].garage === true){
                 match = match + 1;
             }
-            if(wishlist[0].pool === true && houses[index].pool === true){
+            if(wishlist.pool === true && houses[index].pool === true){
                 match = match + 1;
             }
-            if(wishlist[0].yard === true && houses[index].yard === true){
+            if(wishlist.yard === true && houses[index].yard === true){
                 match = match + 1;
             }
 
@@ -65,13 +70,15 @@ class Dashboard extends Component{
     }
 
     goToWelcome = event =>{
-        this.setState({
-            toWelcome: true
+        fakeAuth.signout(() => {
+            this.setState({
+                toWelcome: true
+            })
         })
+
     }
 
     render(){
-        const {email} = this.props.match.params;
         if(this.state.toWelcome === true){
             return <Redirect to="/"/>
         }
@@ -87,7 +94,7 @@ class Dashboard extends Component{
 
                 <button onClick={this.goToWelcome}>Logout</button>
                 <button onClick={this.goToAddHouse}>Add House</button>
-
+                <ul>
                 {this.state.houses.map(house => (
                     <DashboardC
                         key={house._id}
@@ -98,6 +105,7 @@ class Dashboard extends Component{
                         match={house.match}
                     />
                 ))}
+                </ul>
 
             </div>
         )

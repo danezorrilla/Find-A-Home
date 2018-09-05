@@ -49,7 +49,7 @@ class AddHouse extends Component{
         bathrooms: this.state.bathrooms})
         .then(res => console.log(res.data));
 
-        this.gotoDashboard();
+        this.goToDashboard();
         
     }
 
