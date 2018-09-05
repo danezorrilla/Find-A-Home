@@ -82,5 +82,4 @@ class AddHouse extends Component{
 
 }
 
-
 export default  AddHouse;
