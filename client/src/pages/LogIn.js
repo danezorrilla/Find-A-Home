@@ -1,7 +1,8 @@
 import React,{Component} from "react";
 import LogInForm from "../components/LogInForm";
 import API from "../utils/API";
-import { Redirect} from "react-router-dom"
+import { Redirect} from "react-router-dom";
+import fakeAuth from "../components/Authentication";
 
 class  LogIn extends Component{
     state = {
@@ -19,8 +20,10 @@ class  LogIn extends Component{
     }
 
     goToDashboard = event =>{
-        this.setState({
-            toDashboard: true
+        fakeAuth.authenticate(() => {
+            this.setState({
+                toDashboard: true
+            })
         })
     }
    
@@ -43,7 +46,7 @@ class  LogIn extends Component{
             return <Redirect to="/signup"/>
         }
         if(this.state.toDashboard === true){
-            return <Redirect to={email +"/dashboard"}/>
+            return <Redirect to={this.state.email + "/dashboard"}/>
         }
         return(
             <LogInForm         

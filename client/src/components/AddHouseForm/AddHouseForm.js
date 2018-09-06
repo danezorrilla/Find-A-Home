@@ -15,9 +15,13 @@ const AddHouseForm = (props) => (
                 <div className="uk-margin addHouse-margin">
                     <input className="uk-input uk-form-width-large" type="text" name="nickname" value={props.nickname} onChange={props.inputChange} placeholder="Brick House ex."/>
                 </div>
+                <label>Price:</label>
+                <div className="uk-margin addHouse-margin">
+                    <input className="uk-input uk-form-width-large" type="text" name="price" value={props.price} onChange={props.inputChange} placeholder="$100,000"/>
+                </div>
                 <label>Square Feet:</label>
                 <div className="uk-margin addHouse-margin">
-                    <input className="uk-input uk-form-width-large" type="number" name="indoorsquarefeet" value={props.indoorsquarefoot} onChange={props.inputChange} placeholder="enter a number"/>
+                    <input className="uk-input uk-form-width-large" type="text" name="indoorsquarefeet" value={props.indoorsquarefoot} onChange={props.inputChange} placeholder="enter a number"/>
                 </div>
                 <label>Address:</label>
                 <div className="uk-margin addHouse-margin">

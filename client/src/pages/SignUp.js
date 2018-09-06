@@ -1,7 +1,8 @@
 import React,{Component} from "react";
 import SignUpForm from "../components/SignUpForm";
 import API from "../utils/API";
-import { Redirect} from "react-router-dom"
+import { Redirect} from "react-router-dom";
+import fakeAuth from "../components/Authentication";
 
 
 class SignUp extends Component{
@@ -20,9 +21,13 @@ class SignUp extends Component{
     }
 
     goToWishlist = event =>{
-        this.setState({
-            toWishlist: true
+        fakeAuth.authenticate(() => {
+            this.setState({
+                toWishlist: true
+            })
+            
         })
+
     }
     
     inputChange = event =>{

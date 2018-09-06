@@ -9,6 +9,12 @@ router.route("/")
 
 router.route("/:email")
   .get(userController.findByEmail);
+
+router.route("/:email/wishlist")
+  .get(userController.findUserWishlist);
+
+router.route("/:email/houses")
+  .get(userController.findUserHouses);
   
 // Matches with "/api/signin"
 router.route("/signin")

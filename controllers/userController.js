@@ -34,6 +34,20 @@ module.exports = {
       .then(dbModel => res.json(dbModel))
       .catch(err => res.status(422).json(err));
   },
+  findUserWishlist: function(req, res){
+    db.Users.findOne({email: req.params.email})
+      .populate("wishlist")
+      .select("wishlist")
+      .then(dbModel => res.json(dbModel))
+      .catch(err => res.status(422).json(err))
+  },
+  findUserHouses: function(req, res) {
+    db.Users.findOne({ email: req.params.email })
+      .populate("houses")
+      .select("houses")
+      .then(dbModel => res.json(dbModel))
+      .catch(err => res.status(422).json(err));
+  },
   update: function(req, res) {
     db.Book
       .findOneAndUpdate({ _id: req.params.id }, req.body)
