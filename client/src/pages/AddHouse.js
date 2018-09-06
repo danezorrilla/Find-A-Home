@@ -49,7 +49,7 @@ class AddHouse extends Component{
         bathrooms: this.state.bathrooms})
         .then(res => console.log(res.data));
 
-        this.gotoDashboard();
+        this.goToDashboard();
         
     }
 
@@ -59,7 +59,7 @@ class AddHouse extends Component{
         }
         return(
             <div>
-                <h2>{this.props.match.params.email}</h2>
+                {/* <h2>{this.props.match.params.email}</h2> */}
                 <AddHouseForm
                 submitForm={this.submitForm}
                 checkboxChange={this.checkboxChange}

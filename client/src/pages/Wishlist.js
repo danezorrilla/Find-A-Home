@@ -52,7 +52,7 @@ class Wishlist extends Component {
 
         return(
             <div>
-                <h1>{this.props.match.params.email}</h1>
+                {/* <h1>{this.props.match.params.email}</h1> */}
                 <WishListForm
                 checkboxChange={this.checkboxChange}
                 inputChange={this.inputChange}

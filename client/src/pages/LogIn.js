@@ -34,15 +34,16 @@ class  LogIn extends Component{
    submitForm = event =>{
        event.preventDefault();
        API.getUser(this.state.email).then(res => console.log(res.data));
-       //this.goToDashboard()
+       this.goToDashboard()
    }
 
     render(){
+        const {email} = this.state;
         if(this.state.toSignup === true){
             return <Redirect to="/signup"/>
         }
         if(this.state.toDashboard === true){
-            return <Redirect to="/dashboard"/>
+            return <Redirect to={email +"/dashboard"}/>
         }
         return(
             <LogInForm         
