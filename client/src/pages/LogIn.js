@@ -41,6 +41,7 @@ class  LogIn extends Component{
    }
 
     render(){
+        const {email} = this.state;
         if(this.state.toSignup === true){
             return <Redirect to="/signup"/>
         }

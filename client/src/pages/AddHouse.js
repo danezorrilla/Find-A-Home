@@ -59,7 +59,7 @@ class AddHouse extends Component{
         }
         return(
             <div>
-                <h2>{this.props.match.params.email}</h2>
+                {/* <h2>{this.props.match.params.email}</h2> */}
                 <AddHouseForm
                 submitForm={this.submitForm}
                 checkboxChange={this.checkboxChange}
@@ -81,6 +81,5 @@ class AddHouse extends Component{
     };
 
 }
-
 
 export default  AddHouse;
