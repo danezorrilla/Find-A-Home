@@ -21,7 +21,7 @@ const AddHouseForm = (props) => (
                 </div>
                 <label>Square Feet:</label>
                 <div className="uk-margin addHouse-margin">
-                    <input className="uk-input uk-form-width-large" type="text" name="indoorsquarefeet" value={props.indoorsquarefoot} onChange={props.inputChange} placeholder="enter a number"/>
+                    <input className="uk-input uk-form-width-large" type="text" name="indoorsquarefeet" value={props.indoorsquarefeet} onChange={props.inputChange} placeholder="enter a number"/>
                 </div>
                 <label>Address:</label>
                 <div className="uk-margin addHouse-margin">
