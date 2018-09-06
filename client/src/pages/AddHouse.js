@@ -8,7 +8,7 @@ class AddHouse extends Component{
         photo: "",
         nickname: "",
         price: null,
-        indoorsquarefoot: "",
+        indoorsquarefeet: 0,
         address: "",
         yard: false,
         garage: false,
@@ -44,7 +44,7 @@ class AddHouse extends Component{
         const{email} = this.props.match.params;
 
         API.createHouse(email, {photo: this.state.photo, nickname: this.state.nickname, price: this.state.price,
-        indoorsquarefoot: this.state.indoorsquarefoot, address: this.state.address, yard: this.state.yard,
+        indoorsquarefeet: this.state.indoorsquarefeet, address: this.state.address, yard: this.state.yard,
         garage: this.state.garage, basement: this.state.basement, pool: this.state.pool, bedrooms: this.state.bedrooms, 
         bathrooms: this.state.bathrooms})
         .then(res => console.log(res.data));
@@ -67,7 +67,7 @@ class AddHouse extends Component{
                 photo={this.state.photo}
                 nickname={this.state.nickname}
                 price={this.state.price}
-                indoorsquarefoot={this.state.indoorsquarefoot}
+                indoorsquarefeet={this.state.indoorsquarefeet}
                 address={this.state.address}
                 yard={this.state.yard}
                 garage={this.state.garage}
